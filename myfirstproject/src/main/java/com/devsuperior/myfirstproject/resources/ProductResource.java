@@ -39,7 +39,7 @@ public class ProductResource {
 		
 //		Product cat = new Product(1L, "Eletronics");
 		
-		Product cat = ProductRepository.findById(id);
+		Product cat = ProductRepository.findById(id).get();
 		return ResponseEntity.ok().body(cat);
 	}
 }
